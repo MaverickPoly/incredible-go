@@ -28,6 +28,7 @@ func SaveTodos() {
 	file, err := os.Create(FILENAME)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "Error: Could not open file to write!")
+		os.Exit(1)
 	}
 
 	defer file.Close()
@@ -107,6 +108,7 @@ func MarkDone(id int) {
 	for index, currentTodo := range todos {
 		if currentTodo.ID == id {
 			foundIndex = index
+			break
 		}
 	}
 
@@ -172,6 +174,7 @@ func main() {
 		}
 		if len(os.Args) < 4 {
 			fmt.Fprintln(os.Stderr, "Error: Missing todo category!")
+			os.Exit(1)
 		}
 
 		title := os.Args[2]

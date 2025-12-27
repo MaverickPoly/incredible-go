@@ -1,0 +1,3 @@
+Dennis MacAlistair Ritchie 
+was an 
+American computer scientist. He created, together with long-time colleague Ken Thompson, the Unix operating system, C programming language, and B programming language.
